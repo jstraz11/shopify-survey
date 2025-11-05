@@ -1,0 +1,30 @@
+{
+  "title": "Daily Picks",
+  "screens": [
+    {
+      "type": "question",
+      "kind": "radio",
+      "id": "q1",
+      "label": "Which of these would you most likely spend money on?",
+      "options": [
+        "Beauty Products",
+        "Home Decor",
+        "Clothing",
+        "Food",
+        "None of these"
+      ]
+    },
+    {
+      "type": "question",
+      "kind": "radio",
+      "id": "q2",
+      "label": "Earn Rewards For Scanning Your Groceries!",
+      "html": "<p style='max-width:720px;margin:0 auto 8px;color:#666;line-height:1.5;text-align:center'>Scan your groceries and be rewarded with gift cards, sweepstakes entries and more! Each week you participate, you earn reward points redeemable for a wide variety of gift cards. You'll also receive additional rewards and incentives for taking part in surveys and special programs. The more you participate the more you earn!</p>",
+      "image": "https://via.placeholder.com/640x360?text=Rewards+Image",
+      "options": [
+        { "label": "YES PLEASE! >", "href": "https://example.com/your-affiliate-link" },
+        { "label": "No thanks" }
+      ]
+    }
+  ]
+}
