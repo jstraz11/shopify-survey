@@ -141,25 +141,26 @@ function render(){
 }
 
 async function finish(){
-  try{
-    const p=new URL(location.href).searchParams;
+  try {
+    const p = new URL(location.href).searchParams;
     await fetch(FORM_ENDPOINT,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        event:'response',
-        name:answers.name||'',
-        email:answers.email||'',
-        answers,
-        user_agent:navigator.userAgent,
-        utm_source:p.get('utm_source')||'github-pages',
-        utm_medium:p.get('utm_medium')||'survey',
-        utm_campaign:p.get('utm_campaign')||''
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        event: "response",
+        name: answers.name || "",
+        email: answers.email || "",
+        answers: answers,
+        user_agent: navigator.userAgent,
+        utm_source: p.get("utm_source") || "github-pages",
+        utm_medium: p.get("utm_medium") || "survey",
+        utm_campaign: p.get("utm_campaign") || ""
       }),
-      mode:'no-cors'
+      mode: "no-cors"
     });
-  }catch(e){ console.error(e); }
+  } catch(e){ console.error(e); }
   location.href = RESULTS_URL;
+}
 }
 
 (async function(){
