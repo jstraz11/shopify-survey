@@ -5,23 +5,29 @@
   :root { --accent:#000; }
   html, body {
     height: 100%;
-    margin: 0;
   }
   body {
+    margin: 0;
     font-family: system-ui, Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: #fff;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* header | main (fills) | footer */
   }
   header, footer {
     background: var(--accent);
     color: #fff;
     text-align: center;
     padding: 14px 0;
-    width: 100%;
+  }
+  /* MAIN fills all remaining height between header and footer */
+  main {
+    flex: 1 0 auto;                       /* fill the space */
+    display: flex;
+    align-items: center;                   /* vertical center */
+    justify-content: center;               /* horizontal center */
+    padding: 24px;
   }
   .card {
     border: 1px solid #eee;
@@ -29,15 +35,19 @@
     padding: 32px 28px;
     text-align: center;
     max-width: 700px;
+    width: min(92vw, 700px);
   }
   h1 { margin-top: 0; }
+  a { color: #000; }
 </style>
 
 <header><strong>PrizePaths</strong></header>
-<main class="card">
-  <h1>🎉 Congratulations — you qualify to get a PS5!</h1>
-  <p>Keep an eye out for an email from us to see if it's on its way.</p>
-  <p>In the meantime, thank you for participating!</p>
-  <p style="margin-top:14px"><a href="./">Return to the survey</a></p>
+<main>
+  <div class="card">
+    <h1>🎉 Congratulations — you qualify to get a PS5!</h1>
+    <p>Keep an eye out for an email from us to see if it's on its way.</p>
+    <p>In the meantime, thank you for participating!</p>
+    <p style="margin-top:14px"><a href="./">Return to the survey</a></p>
+  </div>
 </main>
 <footer><small>© PrizePaths</small></footer>
