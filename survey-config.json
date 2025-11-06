@@ -5,7 +5,7 @@
       "type": "question",
       "kind": "fields",
       "label": "Fill out name and email",
-      "image": "dailygoodieboximage.png",
+      "image": "ps5.jpg",
       "fields": ["name", "email"]
     },
     {
