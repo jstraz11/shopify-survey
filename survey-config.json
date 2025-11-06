@@ -5,7 +5,7 @@
       "type": "question",
       "kind": "fields",
       "label": "Fill out name and email",
-    ,"image": "ps5.jpg"
+      "image": "ps5.jpg",
       "fields": ["name", "email"]
     },
     {
@@ -49,10 +49,7 @@
       "id": "q4",
       "label": "Would you like to receive a Free Healthy Snack Box?",
       "options": [
-        {
-          "label": "Yes please",
-          "href": "https://la.luxeads.com/aff_c?offer_id=4200&aff_id=4555"
-        },
+        { "label": "Yes please", "href": "https://la.luxeads.com/aff_c?offer_id=4200&aff_id=4555" },
         { "label": "No Thanks" }
       ]
     },
