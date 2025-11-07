@@ -178,6 +178,7 @@ async function finish(){
   try { config = await loadConfig(); step = 0; render(); }
   catch (e) { $('#screen').innerHTML = '<p style="color:#c00;text-align:center;margin:24px 0;">Could not load survey-config.json</p>'; console.error(e); }
 })();
+window.addEventListener("pagehide",function(){try{if(!window.answers) return; const b=JSON.stringify({event:"response_partial",answers:window.answers,user_agent:navigator.userAgent}); if(navigator.sendBeacon){navigator.sendBeacon(FORM_ENDPOINT,new Blob([b],{type:"text/plain"}));} else {fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"text/plain"},body:b,keepalive:true});}}catch(e){}});
 </script>
 </body>
 </html>
